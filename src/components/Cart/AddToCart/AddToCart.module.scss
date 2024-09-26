@@ -1,0 +1,7 @@
+@import '../../../SCSS/mixins';
+
+.in_cart {
+    @include poppins400;
+    font-size: 14px;
+    color: #F26D36;
+}

@@ -1,0 +1,189 @@
+@import '../../../SCSS/mixins';
+
+.myOffisInfo {
+	padding: 20px 20px 30px;
+	background: rgb(40, 42, 40);
+	border-radius: 10px;
+	width: 420px;
+	max-height: 380px;
+	left: 60px;
+	right: 960px;
+	top: 94px;
+	bottom: 550px;
+
+	@media (max-width: 550px) {
+		max-height: 500px;
+		width: 100%;
+	}
+
+	@media (max-width: 900px) {
+		width: 100%;
+	}
+
+	.photo {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		gap: 12px;
+		background: rgb(40, 42, 40);
+
+		@media (max-width: 550px) {
+			flex-direction: column;
+		}
+
+		.photoText {
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+			background: rgb(40, 42, 40);
+
+			h2 {
+				color: rgb(255, 255, 255);
+				font-size: 18px;
+				line-height: 130%;
+				@include poppins400;
+				background: rgb(40, 42, 40);
+			}
+
+			p {
+				color: rgb(131, 131, 131);
+				font-size: 18px;
+				line-height: 130%;
+				@include poppins400;
+
+				&:hover {
+					transition: all 0.3s ease-in-out;
+					color: rgb(238, 232, 232);
+				}
+			}
+
+			button {
+				display: flex;
+				align-items: center;
+				cursor: pointer;
+				background: rgb(40, 42, 40);
+				gap: 7.5px;
+				border: none;
+
+				p {
+					@include poppins400;
+					background: rgb(40, 42, 40);
+					text-align: start;
+					color: rgb(131, 131, 131);
+					font-size: 18px;
+					line-height: 130%;
+					width: 250px;
+					flex-wrap: nowrap;
+				}
+
+				div {
+					background: rgb(40, 42, 40);
+
+					img {
+						background: rgb(40, 42, 40);
+					}
+				}
+			}
+		}
+
+		.photoImg {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			width: 100px;
+			height: 100px;
+			background: rgb(76, 79, 76);
+
+			img {
+				width: 100px;
+				height: 100px;
+				border-radius: 50%;
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+	}
+
+	.inf {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		background: rgb(40, 42, 40);
+		align-items: flex-start;
+		gap: 24px;
+		margin: 20px 0 24px;
+
+		@media (max-width: 550px) {
+			gap: 10px;
+		}
+
+		li {
+			all: unset;
+		}
+
+		.user_text {
+			@include poppins400;
+			font: inherit;
+			opacity: 0.6;
+			font-size: 16px;
+		}
+
+		span {
+			@include poppins500;
+			color: white;
+			font-size: 18px;
+			line-height: 130%;
+			background: rgb(40, 42, 40);
+		}
+
+		p {
+			@include poppins400;
+			display: flex;
+			gap: 6px;
+			font-size: 16px;
+			line-height: 130%;
+			letter-spacing: 0%;
+			background: rgb(40, 42, 40);
+			opacity: 0.6;
+		}
+	}
+
+	.img {
+		background: rgb(40, 42, 40);
+		display: flex;
+		align-items: center;
+		gap: 14px;
+
+		li {
+			all: unset;
+		}
+
+		a {
+			@include poppins400;
+			background: rgb(40, 42, 40);
+		}
+
+		img {
+			background: rgb(40, 42, 40);
+		}
+	}
+}
+
+// btn editor
+.btn_editor {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 184px;
+	height: 40px;
+	border-radius: 8px;
+
+	background: rgb(242, 109, 54);
+	color: rgb(252, 252, 252);
+	@include poppins500;
+	font-size: 20px;
+	line-height: 130%;
+	letter-spacing: 0%;
+	text-align: left;
+}

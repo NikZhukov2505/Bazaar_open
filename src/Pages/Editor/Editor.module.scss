@@ -1,0 +1,41 @@
+@import '../../SCSS/mixins';
+
+.AddingProduct {
+	width: 100%;
+	min-height: 700px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		width: 83.5%;
+		min-height: 479px;
+		margin: 0 auto;
+		padding: 40px 0;
+		justify-content: center;
+
+		& .title {
+			color: rgb(255, 255, 255);
+			font-size: 38px;
+			@include poppins700;
+			line-height: 130%;
+			letter-spacing: 0px;
+			text-align: left;
+
+			@include old1024 {
+				font-size: 34px;
+			}
+
+			@include mobileL {
+				font-size: 28px;
+			}
+
+			@include mobileM {
+				font-size: 22px;
+			}
+		}
+	}
+}

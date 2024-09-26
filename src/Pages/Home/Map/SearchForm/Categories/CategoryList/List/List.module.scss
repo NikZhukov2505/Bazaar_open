@@ -1,0 +1,65 @@
+@import '../../../../../../../SCSS/mixins';
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    user-select: none;
+
+    & .choosed {
+        background-color: #282A28;
+        transition: .2s;
+        border-radius: 5px;
+        padding: 0 5px;
+    }
+
+    & .category_name_wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        border-bottom: 2px solid rgb(255, 255, 255);
+        padding-bottom: 10px;
+
+        & h4 {
+            font-size: 18px;
+            color: #030303;
+            @include poppins500;
+            line-height: 27px;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        & .arrow {
+            cursor: pointer;
+            transition: .2s;
+        }
+
+        & .open {
+            transform: rotate(180deg);
+        }
+    }
+
+    & .sub_list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 10px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 27px;
+        cursor: pointer;
+
+        & .choosed {
+            background-color: #282A28;
+            transition: .2s;
+            border-radius: 5px;
+            padding: 5px
+        }
+
+        & li {
+            @include poppins400;
+            border-bottom: 1px solid rgb(255, 255, 255);
+        }
+    }
+}

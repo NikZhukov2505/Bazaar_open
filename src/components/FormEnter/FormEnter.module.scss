@@ -1,0 +1,193 @@
+@import '../../SCSS/mixins';
+
+.wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 998;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: rgba(107, 107, 107, 0.5);
+	backdrop-filter: blur(5px);
+
+	.container {
+
+		.content {
+			width: 648px;
+			height: 392px;
+			border-radius: 10px;
+			background: rgb(40, 42, 40);
+			padding: 32px;
+
+			@media screen and (max-width: 650px) {
+				width: 370px;
+				padding: 15px;
+			}
+
+			@media screen and (max-width: 370px) {
+				width: 350px;
+			}
+
+			.form {
+				width: 100%;
+				height: 100%;
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+
+				.closed {
+					display: none;
+				}
+
+				& h2 {
+					color: #fff;
+					font-size: 32px;
+					font-weight: 600;
+					line-height: 30px;
+					letter-spacing: 0px;
+					text-align: left;
+					@include poppins600;
+
+					@include mobileM {
+						font-size: 26px;
+					}
+				}
+
+				.username {
+					display: flex;
+					flex-direction: column;
+					gap: 8px;
+					margin-bottom: 20px;
+
+					& h3 {
+						color: #fff;
+						font-size: 16px;
+						font-weight: 500;
+						line-height: 20px;
+						letter-spacing: 0px;
+						text-align: left;
+						@include poppins500;
+					}
+
+					.error_text {
+						color: red;
+						font-size: 16px;
+						font-weight: 500;
+						line-height: 20px;
+						letter-spacing: 0px;
+						text-align: left;
+						@include poppins500;
+					}
+
+					.input_username {
+						width: 100%;
+						height: 38px;
+						@include poppins400;
+
+						& label {
+							color: #fff;
+						}
+
+						& input {
+							color: #fff;
+						}
+					}
+				}
+
+				.password {
+					display: flex;
+					flex-direction: column;
+					gap: 12px;
+
+					& h3 {
+						color: #fff;
+						font-size: 16px;
+						font-weight: 500;
+						line-height: 20px;
+						letter-spacing: 0px;
+						text-align: left;
+						@include poppins500;
+					}
+
+					.forgot_password {
+						color: rgb(255, 255, 255);
+						@include poppins400;
+						font-size: 16px;
+						line-height: 120%;
+						letter-spacing: 0px;
+						text-align: right;
+					}
+
+					.input_text {
+						color: #fff;
+						@include poppins400;
+						font-size: 16px;
+						line-height: 120%;
+						letter-spacing: 0px;
+						text-align: left;
+					}
+
+					.error_text {
+						color: red;
+						font-size: 16px;
+						font-weight: 500;
+						line-height: 20px;
+						letter-spacing: 0px;
+						text-align: left;
+						@include poppins500;
+					}
+
+					.input_password {
+						// height: 53px;
+						@include poppins400;
+						color: #fff;
+					}
+				}
+
+				.bottom_login {
+					width: 100%;
+					height: 30%;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+
+					.error_text {
+						color: rgb(248, 60, 60);
+						font-size: 16px;
+						font-weight: 500;
+						line-height: 20px;
+						letter-spacing: 0px;
+						text-align: left;
+						@include poppins500;
+					}
+
+					button {
+						color: rgb(252, 252, 252);
+						@include poppins500;
+						font-size: 20px;
+						line-height: 120%;
+						letter-spacing: 0%;
+						text-align: left;
+						border-radius: 5px;
+						width: 130px;
+						height: 48px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+
+						background: rgb(242, 109, 54);
+
+						@include mobileM {
+							width: 100%;
+						}
+					}
+				}
+			}
+		}
+	}
+}

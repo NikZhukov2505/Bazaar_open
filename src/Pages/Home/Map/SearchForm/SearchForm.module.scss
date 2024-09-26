@@ -1,0 +1,53 @@
+@import '../../../../SCSS/mixins';
+
+.search {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+
+    @media screen and (max-width: 900px) {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    @include mobileS {
+        flex-direction: row-reverse;
+        top: 20px;
+        left: 10px;
+        width: 82%;
+        gap: 12px;
+    }
+
+    & input {
+        color: #fff;
+        @include poppins500;
+        padding: 10px;
+        font-size: 18px;
+        line-height: 27px;
+        width: 300px;
+        height: 47px;
+        border-radius: 5px;
+        background: rgb(242, 109, 54);
+
+        @media screen and (max-width: 520px) {
+            width: 200px;
+        }
+
+        @include mobileS {
+            width: 100%;
+            height: 43px;
+        }
+
+        &::placeholder {
+            color: #fff;
+            @include poppins500;
+            font-size: 18px;
+            line-height: 27px;
+        }
+    }
+}

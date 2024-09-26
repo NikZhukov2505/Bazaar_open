@@ -1,0 +1,189 @@
+@import '../../SCSS/mixins';
+
+.container {
+    max-width: 85%;
+    margin: 0 auto;
+
+    @include mobileM {
+        max-width: 95%;
+    }
+
+    @media screen and (min-width: 1921px) {
+        .container {
+            max-width: 1440px;
+        }
+    }
+}
+
+.content {
+    margin: 30px auto 0;
+
+    .arrow {
+        margin: 45px 0 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(90deg);
+        cursor: pointer;
+        width: 35px;
+        height: 35px;
+        background-color: #f26d36;
+        border-radius: 50%;
+        padding: 3px 3px 0px 3px;
+    }
+
+    .top_section {
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media screen and (max-width: 900px) {
+            flex-direction: column-reverse;
+            align-items: center;
+            // text-align: center;
+        }
+
+        .info {
+
+            @include mobileL {
+                width: 100%;
+                // text-align: center
+            }
+
+            .title {
+                @include poppins600;
+                font-size: 26px;
+                line-height: 130%;
+                color: #fff;
+            }
+
+            .subtitle {
+                margin-top: 12px;
+                @include poppins400;
+                font-size: 16px;
+                line-height: 130%;
+                color: #fff;
+                white-space: break-spaces;
+            }
+
+            .social_images {
+                margin-top: 22px;
+                display: flex;
+                gap: 14px;
+            }
+
+            .mail_tel {
+                margin-top: 12px;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+
+                .tel {
+                    width: 12px;
+                    height: 12px;
+                }
+
+                .mail {
+                    width: 13.33px;
+                    height: 10.67px;
+                }
+
+                p {
+                    @include poppins400;
+                    font-size: 16px;
+                    line-height: 130%;
+                    color: #fff;
+                }
+            }
+
+            .submit_wrapper {
+                margin-top: 22px;
+                display: flex;
+                gap: 12px;
+                width: 100%;
+
+                @include mobileL {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .search_block {
+
+                    .search_inp {
+                        border: 1px solid #f26d36;
+                        border-radius: 5px;
+                        padding: 10px;
+                        width: 300px;
+                        height: 47px;
+                        padding: 10px;
+                        @include poppins500;
+                        font-weight: 500;
+                        font-size: 20px;
+                        background-color: #020306;
+                        color: #fff;
+
+                        @include mobileL {
+                            width: 100%;
+                        }
+
+                        &::placeholder {
+                            color: #fff;
+                            @include poppins500;
+                            font-weight: 500;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .rightimage {
+            flex: 0 1 30%;
+
+            & img {
+                width: 100%;
+                height: 330px;
+                object-fit: contain;
+                object-position: center;
+                border-radius: 10px;
+
+                @media screen and (max-width: 900px) {
+                    width: 250px;
+                    height: 250px;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+
+    .catalog_sect {
+        margin-top: 30px;
+
+        .title_catalog {
+            @include poppins500;
+            font-size: 26px;
+            color: #f26d36;
+        }
+
+        .wrapper_products {
+            margin-top: 22px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2%;
+            padding-bottom: 50px;
+
+            @include old1024 {
+                gap: 3%;
+            }
+
+            & .empty {
+                font-size: 18px;
+                @include poppins400;
+                color: #fff;
+            }
+        }
+
+    }
+}

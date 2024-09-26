@@ -1,0 +1,31 @@
+.marker {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    transform: rotate(45deg);
+    z-index: 10;
+    cursor: pointer;
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 50% 50% 0 50%;
+        background: #0000;
+        background-image: radial-gradient(circle 5px at 50% 50%, #0000 94%, #ff4747);
+        z-index: 10;
+    }
+
+    &:after {
+        animation: pulse-ytk0dhmd 1s infinite;
+        transform: perspective(336px) translateZ(0px);
+
+        @keyframes pulse-ytk0dhmd {
+            to {
+                transform: perspective(336px) translateZ(168px);
+                opacity: 0;
+            }
+        }
+    }
+}

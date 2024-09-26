@@ -1,0 +1,60 @@
+@import '../../../../../SCSS/mixins';
+
+.categories {
+	display: flex;
+	width: max-content;
+	user-select: none;
+
+	.category_wrapper {
+		background: rgb(242, 109, 54);
+		position: relative;
+		width: 300px;
+		height: 47px;
+		padding: 10px;
+		cursor: pointer;
+		border-radius: 5px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@media screen and (max-width: 520px) {
+			width: 200px;
+		}
+
+		@include mobileS {
+			width: 42px;
+			height: 43px;
+			justify-content: center;
+		}
+
+		& .arrow {
+			transition: .2s;
+		}
+
+		& .open {
+			transform: rotate(180deg);
+		}
+
+		.category_title {
+			font-size: 18px;
+			color: #fff;
+			@include poppins500;
+			line-height: 27px;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			width: max-content;
+			// @include rubik500;
+
+
+			@include mobileL {
+				font-size: 22px;
+			}
+
+			@include mobileS {
+				font-size: 0px;
+			}
+		}
+	}
+
+}

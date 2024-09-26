@@ -1,0 +1,129 @@
+@import '../../../SCSS/mixins';
+
+.card {
+	display: flex;
+	flex-direction: column;
+	flex: 0 1 23%;
+	height: 380px;
+	gap: 12px;
+	padding: 20px 20px 10px 20px;
+	border-radius: 10px;
+	margin-bottom: 30px;
+	background: rgb(40, 42, 40);
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+
+	@include oldMonitor {
+		flex: 0 1 30%;
+	}
+
+	@include tablet {
+		flex: 0 1 48%;
+	}
+
+	@include mobileL {
+		padding: 16px;
+		height: 320px;
+		padding: 5px 5px 10px;
+		margin-bottom: 8px;
+	}
+
+	.product_image {
+		width: 100%;
+		height: 250px;
+		border-radius: 5px;
+		object-fit: cover;
+		object-position: center;
+
+		@include mobileL {
+			height: 220px;
+		}
+	}
+
+	.name {
+		color: rgb(255, 255, 255);
+		@include poppins500;
+		font-size: 18px;
+		line-height: 130%;
+		letter-spacing: 0%;
+		text-align: left;
+		overflow: hidden;
+		position: relative;
+		white-space: nowrap;
+		word-break: keep-all;
+
+		&::after {
+			display: block;
+			position: absolute;
+			content: "";
+			top: 0;
+			right: 0;
+			width: 28px;
+			height: 100%;
+			background: linear-gradient(to right, rgba(40, 42, 40, 0.262745098), #282a28);
+		}
+	}
+
+	.card_bottom {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+
+		.price {
+			color: rgb(255, 255, 255);
+			@include poppins400;
+			font-size: 18px;
+			line-height: 130%;
+			letter-spacing: 0%;
+			text-align: left;
+		}
+
+		.btns_wrapper {
+			width: 80px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			@include mobileS {
+				width: 70px;
+			}
+
+			& .delete_btn {
+				border-radius: 5px;
+				background-color: #F26D36;
+				padding: 4px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 38px;
+				height: 38px;
+
+				@include mobileS {
+					width: 32px;
+					height: 32px;
+				}
+
+				& svg {
+					fill: #fff;
+					font-size: 26px;
+
+				}
+			}
+
+
+
+			img {
+				width: 38px;
+				height: 38px;
+
+				@include mobileS {
+					width: 32px;
+					height: 32px;
+				}
+			}
+		}
+
+
+	}
+}

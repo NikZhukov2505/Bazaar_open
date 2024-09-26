@@ -1,0 +1,200 @@
+@import '../../SCSS/mixins';
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 900px;
+    color: #fff;
+
+    @include mobileS {
+        min-height: 700px;
+    }
+
+    & .container {
+        width: 400px;
+
+        @include mobileS {
+            width: 360px;
+        }
+
+        min-height: 300px;
+        border-radius: 5px;
+        background-color: #555555;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+
+        & .title {
+            @include poppins600;
+            font-size: 28px;
+            margin: 20px 0 40px;
+        }
+
+        & a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 50px;
+            padding: 5px;
+            padding-left: 20px;
+            border-radius: 10px;
+            background-color: #25D366;
+            margin-bottom: 5px;
+        }
+
+        .instA {
+            background: #897994;
+            background: linear-gradient(to right,
+                    #fcb045, #fd1d1d, #833ab4);
+
+            p {
+                color: white;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 130%;
+                letter-spacing: 0px;
+                text-align: left;
+                @include poppins400;
+            }
+
+            @media(max-width:1075px) {
+                p {
+                    font-size: 12px;
+                }
+            }
+
+            @media(max-width:767px) {
+                p {
+                    font-size: 18px;
+                }
+            }
+
+            @media(max-width:525px) {
+                p {
+                    font-size: 14px;
+                }
+            }
+
+
+            .inst {
+                width: 35px;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        .whA {
+
+            p {
+                color: white;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 130%;
+                letter-spacing: 0px;
+                text-align: left;
+                @include poppins400;
+            }
+
+            @media(max-width:1075px) {
+                p {
+                    font-size: 12px;
+                }
+            }
+
+            @media(max-width:767px) {
+                p {
+                    font-size: 18px;
+                }
+            }
+
+            @media(max-width:525px) {
+                p {
+                    font-size: 14px;
+                }
+            }
+
+            img {
+                width: 35px;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        .tg {
+            background-color: #0088cc;
+
+            p {
+                color: white;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 130%;
+                letter-spacing: 0px;
+                text-align: left;
+                @include poppins400;
+            }
+
+            @media(max-width:1075px) {
+                p {
+                    font-size: 12px;
+                }
+            }
+
+            @media(max-width:767px) {
+                p {
+                    font-size: 18px;
+                }
+            }
+
+            @media(max-width:525px) {
+                p {
+                    font-size: 14px;
+                }
+            }
+
+            img {
+                width: 35px;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+}
+
+.text_container {
+    width: 90%;
+    height: 100%;
+    background-color: hsla(0, 0%, 7%, 0.327);
+    margin: 100px auto;
+    backdrop-filter: blur(7px);
+    color: #fff;
+    padding: 20px;
+    min-height: 700px;
+    box-shadow: 0px 0px 15px 1px #ffffff2a;
+    border-radius: 15px;
+
+    & .title {
+        text-align: center;
+        @include poppins600;
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    & p {
+        white-space: break-spaces;
+        font-size: 18px;
+        @include poppins400;
+        line-height: 26px;
+
+    }
+}
+
+@media screen and (min-width: 1921px) {
+    .text_container {
+        width: 1440px;
+    }
+}

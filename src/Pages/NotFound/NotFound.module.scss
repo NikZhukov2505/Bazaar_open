@@ -1,0 +1,25 @@
+@import '../../SCSS/mixins';
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & .container {
+        text-align: center;
+
+        & h2 {
+            font-size: 200px;
+            color: #fff;
+            @include poppins600;
+            margin-bottom: 40px;
+        }
+
+        & h1 {
+            font-size: 35px;
+            color: #fff;
+            @include poppins400;
+        }
+    }
+}
